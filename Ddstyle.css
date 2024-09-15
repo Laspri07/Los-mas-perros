@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #080708;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.swiper-button-prev::after {
+    font-size: 25px;
+}
+.swiper-button-next::after {
+    font-size: 25px;
+}
+.swiper-button-next {
+    color: #FF6201;
+}
+.swiper-button-prev {
+    color: #FF6201;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fefeff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FF6201;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    height: 70px;
+    
+}
+.navbar {
+    display: flex;
+}
+.menu-1{
+    margin-right: 100px;
+
+}
+
+.menu-2 {
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.logo-1 {
+    width: 0;
+}
+.logo-2 {
+    width: 150px;
+}
+
+.barras {
+    display: flex;
+    gap: 10px;
+    
+}
+.barra {
+    margin: 0 10px;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.barra:hover {
+    background-color: #DB241B;
+}
+.barra img {
+    margin: 8px 0 0 6px;
+}
+.socials {
+    display: flex;
+    gap: 10px;
+    
+}
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DB241B;
+    border-radius: 50%;
+}
+.social:hover {
+    background-color: #DB241B;
+}
+.social img {
+    margin: 8px 0 0 10px;
+}
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+}
+.menu .navbar ul li a:hover {
+    color: #DB241B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 15px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu-2 {
+        display: none;
+    }
+
+    .logo-1 {
+        width: 100px;
+    }
+
+    .logo-2 {
+        width: 0;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+    }
+
+    .menu .navbar ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+    
+    .slider-txt {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .slider-txt h1 {
+        font-size: 50px;
+    }
+
+    .slider-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .slider-img {
+        width: 100%;
+        text-align: center;
+    }
+    .slider-img img {
+        margin-right: 0px;
+        width: 300px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets,.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -7px;
+    }
+ 
+    .tabs {
+        padding: 50px 30px;
+    }
+
+    .tabs label {
+        width: 33%;
+    }
+
+    .info {
+        padding: 30px;
+        flex-direction: column;
+    }
+    
+    .info-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .info-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-txt h2 {
+        font-size: 50px;
+    }
+
+    .info-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        font-size: 16px;
+    }
+    .horario {
+        padding: 30px;
+        text-align: center;
+    }
+    .horario-info h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    .horaio-txt {
+        flex-direction: column;
+    }
+    .socials {
+        justify-content: center;
+    }
+    .social img {
+        margin: 8px 0 0 0;
+    }
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .links h4 {
+        margin: 25px 0px 10px 0px;
+    }
+
+
+
+}
+
+
+/* barra fija */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.secondary-menu {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 70px; 
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+.secondary-menu .menu-items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.secondary-menu .menu-items li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+
+}
+
+.secondary-menu .menu-items li a:hover {
+    color: #ff6347;
+}
+
+/* Ajuste de la barra de menú para pantallas pequeñas */
+@media (max-width: 768px) {
+    .top-menu .menu-items,
+    .secondary-menu .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secondary-menu .menu-items li {
+        margin-right: 10px;
+    }
+}
+
+/* Estilos para el contenido principal */
+.main {
+    padding-top: 140px; /* Espacio para ambas barras de menú */
+}
+
+
+/*Caja menu todo*/
+#cajamenu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cajamenu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: left;
+}
+
+.cajamenu-item h3 {
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select, form button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resumen-details {
+    text-align: left;
+}
+

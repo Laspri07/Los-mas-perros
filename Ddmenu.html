@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Ddstyle.css" />
+
+</head>
+<body>
+    <header>
+        <div class="menu container">
+
+            <img class="logo-1" src="images/logo.svg" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Top cachones</a></li>
+                        <li><a href="#">Contactanos</a></li>
+                    </ul>
+                </div>
+                <a href="Aaprincipal.html">
+                    <img href="Aaprincipal.html" class="logo-2" src="" alt="">
+                    </a>
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="#">Menu</a> </li>
+                    </ul>
+                    <div class="barras">
+                        <a href="#">
+                            <div class="barra">
+                                <img src="images/1ubi.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="barra">
+                                <img src="images/2carrito.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="Bblogin.html">
+                            <div class="barra">
+                                <img src="images/3user.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="secondary-menu">
+    
+                    <ul class="menu-items">
+                        <li><a href="#nuevos">Nuevos</a></li>
+                        <li><a href="#salchipapas">Salchipapas</a></li>
+                        <li><a href="#hamburguesas">Hamburguesas</a></li>
+                        <li><a href="#bebidas">Bebidas</a></li>
+                    </div>
+            
+                
+    
+
+        </body>
+        </html>
+            <!-- Sección del Menú -->
+    <section id="cajamenu" style="display:none;">
+        <h2>Menú</h2>
+        <div id="cajamenu-items"></div>
+    </section>
+
+    <!-- Sección de Personalización del Pedido -->
+    <section id="pedido" style="display:none;">
+        <h2>Personaliza tu Pedido</h2>
+        <form id="pedido-form">
+            <label for="papas">¿Deseas papas fritas adicionales?</label>
+            <select id="papas">
+                <option value="No">No</option>
+                <option value="Sí">Sí</option>
+            </select>
+
+            <label for="salsa">Elige una salsa:</label>
+            <select id="salsa">
+                <option value="Ketchup">Ketchup</option>
+                <option value="Mayonesa">Mayonesa</option>
+                <option value="Mostaza">Mostaza</option>
+            </select>
+
+            <label for="carne">Selecciona el tipo de carne:</label>
+            <select id="carne">
+                <option value="Res">Res</option>
+                <option value="Cerdo">Cerdo</option>
+                <option value="Pollo">Pollo</option>
+            </select>
+
+            <button type="button" onclick="mostrarResumen()">Mostrar Resumen</button>
+        </form>
+    </section>
+
+    <!-- Sección de Resumen del Pedido -->
+    <section id="resumen" style="display:none;">
+        <h2>Resumen del Pedido</h2>
+        <div id="resumen-details"></div>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+
+        
+   <script src="Ddscript.js"></script>
+
+</body>
+</html>

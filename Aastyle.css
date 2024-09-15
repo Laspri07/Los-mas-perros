@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #0d0d0d;
+    background-color: #080708;
     font-family: "Poppins", sans-serif;
 }
 
@@ -25,19 +25,19 @@ body {
     font-size: 25px;
 }
 .swiper-button-next {
-    color: #DB241B;
+    color: #FF6201;
 }
 .swiper-button-prev {
-    color: #DB241B;
+    color: #FF6201;
 }
 
 .swiper-pagination-bullet {
-    background-color: #D3D2D2;
+    background-color: #fefeff;
     opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #DB241B;
+    background-color: #FF6201;
 }
 
 .menu {
@@ -140,7 +140,9 @@ body {
 .menu label {
     cursor: pointer;
     display: none;
-}
+} 
+hasta aqui llega el codigo de la barra
+
 
 .header-content {
     margin-top: 200px;
