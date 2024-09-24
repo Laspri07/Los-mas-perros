@@ -304,6 +304,15 @@ body {
 
 /* barra fija */
 
+
+
+
+
+
+
+
+
+
 .products {
     background-color: #0d0d0d;
 }
@@ -311,19 +320,20 @@ body {
 .tabs {
     display: flex;
     flex-wrap: wrap;
-    padding: 100px 0px;
+    padding: 70px 0px;
 }
 
 .tabs label {
-    width: 15%;
+    width: 25%;
     order: 1;
     display: block;
     padding: 20px 0;
     text-align: center;
     cursor: pointer;
-    color: #a7a7a7;
+    color: #0d0d0d;
     font-weight: 700;
     transition: background ease 0.2s;
+    background-color: #fefeff;
 }
 
 .tabs .tab {
@@ -339,7 +349,7 @@ body {
 }
 .tabs input[type="radio"]:checked + label {
     border-bottom: 2px solid #DB241B;
-    color: #FFFFFF;
+    color: #444343;
 }
 .tabs input[type="radio"]:checked + label + .tab {
     display: block;
@@ -376,7 +386,7 @@ body {
 }
 
 .product-txt {
-    width: 50%;
+    width: 40%;
     margin-left: 10px;
     text-align: left;
 }
@@ -436,17 +446,63 @@ body {
     margin-bottom: 50px;
 }
 
-.btn-2 {
-    display: inline-block;
-    padding: 15px 35px;
-    background-color: #DB241B;
-    color: #FFFFFF;
-    font-weight: 800;
-    text-transform: uppercase;
-    border-radius: 50px;
-    text-decoration: none; /* Quita el subrayado del enlace */
+
+
+
+/* Empieza carrito*/
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
-.btn-2:hover {
-    background-color: #B22222; /* Un tono diferente de rojo */
+button {
+    background-color: #DB241B;
+    color: white;
+    border: none;
+    height: 45px;
+    width: 150px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+button:hover {
+    background-color: #5e0c08;
+}
+
+.cart {
+    border: 1px solid #ccc;
+    padding: 20px;
+    color: white;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+#clear-cart, .checkout-button {
+    background-color: #DB241B;
+    margin-top: 10px;
+}
+
+#clear-cart:hover, .checkout-button:hover {
+    background-color: #c82333;
+}
+
+#confirmation {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #DB241B;
+    padding: 20px;
+    margin-top: 20px;
 }
