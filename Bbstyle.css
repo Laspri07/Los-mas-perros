@@ -20,6 +20,7 @@ body {
     padding: 20px 30px;
     border-top: 4px solid #017bab;
     color: white;
+    border-radius: 10px;
 }
 
 .form-login h5 {

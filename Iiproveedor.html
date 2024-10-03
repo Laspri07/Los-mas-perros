@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedor</title>
+    <link rel="stylesheet" href="Iistyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+      </style>
+</head>
+<body>
+
+
+    <div class="contenedor-formulario">
+        <h1>¿Quieres ser nuestro proveedor?</h1>
+        <h2>Siempre buscamos calidad para nuestros clientes, ¡Muéstranos tu servicio o producto!</h2>
+          
+        <!-- Formulario -->
+        <form>
+            <!-- Nombre de la empresa -->
+            <br><label for="nombre-empresa">Nombre de la empresa</label>
+            <input type="text" id="nombre-empresa" name="nombre-empresa" placeholder="Ingresa el nombre de la empresa" required>
+
+            <!-- NIT -->
+            <label for="nit">NIT</label>
+            <input type="text" id="nit" name="nit" placeholder="Ingresa el NIT de la empresa" required>
+
+            <!-- Número de Teléfono -->
+            <label for="telefono">Número de Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de contacto" required>
+
+            <!-- Correo Electrónico -->
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+
+            <!-- Producto/Servicio -->
+            <label for="producto">Producto/Servicio</label>
+            <input type="text" id="producto" name="producto" placeholder="¿Qué ofreces?" required>
+
+            <!-- Comentarios -->
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Cuéntanos sobre tu empresa y lo que ofreces" rows="4" required></textarea>
+
+            <!-- Adjuntar Hoja de Vida -->
+            <label for="hoja-vida">Adjunta tu hoja de vida</label>
+            <input type="file" id="hoja-vida" name="hoja-vida" accept=".pdf,.doc,.docx" required>
+
+            <!-- Términos y Condiciones -->
+            <div class="contenedor-checkbox">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit">Enviar</button>
+
+             <!-- Flecha para volver atrás -->
+        <a href="Ggcontactanos.html" class="flecha-volver">← Volver</a>
+        </form>
+    </div>
+</body>
+</html>

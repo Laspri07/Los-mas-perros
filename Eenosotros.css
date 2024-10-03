@@ -38,4 +38,6 @@ body {
     color: #FFFFFF;
     font-size: 25px;
 }
-
+.info {
+   align-items: center;
+}

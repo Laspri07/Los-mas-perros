@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="Hhstyle.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    </style>
+    
+  
+</head>
+<body>
+    
+    <div class="seccion-formulario">
+        <h1>¡Queremos tus habilidades!</h1>
+        <h2>Si eres un buen perro, ven a nuestro infierno</h2>
+        <form>
+            <!-- Nombre completo -->
+            <label for="nombre-completo">Nombre completo:</label>
+            <div class="campos-nombre">
+                <input type="text" id="nombre" placeholder="nombre" required>
+                <input type="text" id="apellido" placeholder="apellido" required>
+            </div>
+
+            <!-- Correo electrónico -->
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Tu correo" required>
+
+            <!-- Ciudad de residencia -->
+            <label for="ciudad">Ciudad de residencia:</label>
+            <select id="ciudad" required>
+                <option value="" disabled selected>Selecciona una ciudad</option>
+                <option value="ciudad1">Ciudad 1</option>
+                <option value="ciudad2">Ciudad 2</option>
+                <option value="ciudad3">Ciudad 3</option>
+                <option value="ciudad4">Ciudad 4</option>
+            </select>
+
+            <!-- Área de interés -->
+            <label>Área de interés:</label>
+            <div class="opciones-interes">
+                <label><input type="checkbox" value="area1"> Punto de Venta</label>
+                <label><input type="checkbox" value="area2"> Logística y Marketing</label>
+                <label><input type="checkbox" value="area3"> Finanzas y Contabilidad</label>
+                <label><input type="checkbox" value="area4"> Domiciliario</label>
+            </div>
+
+            <!-- Hoja de vida -->
+            <label for="hoja-vida">Hoja de vida:</label>
+            <input type="file" id="hoja-vida" accept=".pdf, .doc, .docx" required>
+
+            <!-- Aceptar términos y condiciones -->
+            <div class="terminos">
+                <label>
+                    <input type="checkbox" required> Acepto los términos y condiciones
+                </label>
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit">Enviar</button>
+            
+        </form>
+
+        <!-- Botón para regresar -->
+        <a href="Ggcontactanos.html" class="boton-regresar">&#8592; Volver</a>
+    </div>
+</body>
+</html>
