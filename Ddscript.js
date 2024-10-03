@@ -1,16 +1,4 @@
-var swiper1 = new Swiper (".mySwiper-1", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    }
-});
+
 
 var swiper2 = new Swiper (".mySwiper-2", {
     slidesPerView: 3,
@@ -72,6 +60,7 @@ function updateCart() {
         // Botón para eliminar el producto
         let removeButton = document.createElement('button');
         removeButton.textContent = 'Eliminar';
+        removeButton.classList.add('delete-button'); 
         removeButton.addEventListener('click', () => {
             removeFromCart(index);
         });
@@ -139,3 +128,9 @@ clearCartButton.addEventListener('click', clearCart);
 
 // Añadir evento al botón de "Finalizar Compra"
 checkoutButton.addEventListener('click', checkout);
+
+/* Funcion de sub pagina */
+function toggleCart() {
+    const cart = document.getElementById('cartContainer');
+    cart.classList.toggle('open');
+}

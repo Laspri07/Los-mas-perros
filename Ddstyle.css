@@ -25,10 +25,10 @@ body {
     font-size: 25px;
 }
 .swiper-button-next {
-    color: #FF6201;
+    color: #DB241B;
 }
 .swiper-button-prev {
-    color: #FF6201;
+    color: #DB241B;
 }
 
 .swiper-pagination-bullet {
@@ -37,7 +37,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #FF6201;
+    background-color: #DB241B;
 }
 
 .menu {
@@ -469,12 +469,23 @@ button {
     margin-top: 12px;
 }
 
+
 button:hover {
     background-color: #5e0c08;
 }
 
+.delete-button {
+    width: 80px; /* Cambia el tamaño solo para este botón */
+    height: 30px;
+    background-color: #DB241B;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 10px; /* Añade espacio para separar del contenido */
+    margin-right: 10px;
+}
+
 .cart {
-    border: 1px solid #ccc;
     padding: 20px;
     color: white;
 }
@@ -506,3 +517,32 @@ button:hover {
     padding: 20px;
     margin-top: 20px;
 }
+
+/*Carrito sub pagina*/
+.cart {
+    border: 1px solid #ccc;
+    padding: 20px;
+    color: white;
+    height: 90%; /* Permite que la altura se ajuste automáticamente */
+
+}
+
+.cart-container {
+    position: fixed;
+    top: 50;
+    right: -500px; /* Inicialmente fuera de la vista */
+    width: 500px;
+    height: 100vh;
+    background-color: #1f1d1d;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+/* Si el carrito está visible */
+.cart-container.open {
+    right: 0; /* Lo desliza dentro de la vista */
+}
+

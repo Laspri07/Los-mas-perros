@@ -41,7 +41,22 @@
                         </a>
                         <a href="#">
                             <div class="barra">
-                                <img src="images/2carrito.svg" alt="">
+                                <img src="images/2carrito.svg" alt="Cart Icon" onclick="toggleCart()">
+                            </div>
+                            <div class="cart-container" id="cartContainer">
+                                <div class="cart">
+                                    <h2>Tu Carrito</h2>
+                                    <br>
+                                    <ul id="cart-items"></ul>
+                                    <p>Total: $<span id="total-price">0</span></p>
+                                    <button id="clear-cart">Vaciar Carrito</button>
+                                    <button id="checkout" class="checkout-button">Finalizar Compra</button>
+                                </div>
+                            
+                                <div id="confirmation" style="display:none;">
+                                    <h2>¡Gracias por tu compra!</h2>
+                                    <p>Tu compra ha sido procesada exitosamente.</p>
+                                </div>
                             </div>
                         </a>
                         <a href="Bblogin.html">
@@ -71,7 +86,7 @@
                                 <div class="swiper mySwiper-2" id="swiper1">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Cacho Alegre" data-price="12000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/burguer1.png">
@@ -79,50 +94,50 @@
                                                 <div class="product-txt">
                                                     <h4>Cacho Alegre</h4>
                                                     <p>Carne vegetariana </p>
-                                                    <span class="price">$15k</span>
+                                                    <span class="price">$12k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product"data-id="1" data-name="Traición a la Parrilla" data-price="12000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/burguer2.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
+                                                    <h4>Traición a la Parrilla</h4>
                                                     <p>calidad premium</p>
-                                                    <span class="price">$16k</span>
+                                                    <span class="price">$12k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Moza al Carbón" data-price="15000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/burguer3.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
+                                                    <h4>Moza al Carbón</h4>
                                                     <p>calidad premium</p>
-                                                    <span class="price">$17k</span>
+                                                    <span class="price">$15k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product data-id="1" data-name="La Bandida Doble Queso" data-price="15000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/burguer4.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
+                                                    <h4>La Bandida Doble Queso</h4>
                                                     <p>calidad premium</p>
-                                                    <span class="price">$17k</span>
+                                                    <span class="price">$15k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
@@ -143,57 +158,57 @@
                                 <div class="swiper mySwiper-2" id="swiper2">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Salchi a lo Prohibido" data-price="17000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/salchi1.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
+                                                    <h4>Salchi a lo Prohibido</h4>
                                                     <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <span class="price">$17k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Producto 1" data-price="10">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/salchi2.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
+                                                    <h4>Montaña de Engaños</h4>
                                                     <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <span class="price">$17k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="La Noche de Traición" data-price="18000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/salchi3.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>La Noche de Traición</h4>
+                                                    <p>Para recordar aquellos momentos inolvidables (o no).</p>
+                                                    <span class="price">$18k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="La Explosión de Pasión" data-price="18000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/salchi4.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>La Explosión de Pasión</h4>
+                                                    <p>Ideal para los amantes de lo intenso.</p>
+                                                    <span class="price">$18k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
@@ -216,71 +231,71 @@
                                 <div class="swiper mySwiper-2" id="swiper3">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="El Sabroso Engaño" data-price="13000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/hotdog1.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>El Sabroso Engaño</h4>
+                                                    <p>Perfecto para los amantes de las buenas historias.</p>
+                                                    <span class="price">$13k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="El Ultimo Adiós" data-price="13000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/hotdog2.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80</span>
+                                                    <h4>El Ultimo Adiós</h4>
+                                                    <p>Para despedirse de una relación que llegó a su fin.</p>
+                                                    <span class="price">$13k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Samuel a lo Perro" data-price="11000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/hotdog3.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80</span>
+                                                    <h4>Samuel a lo Perro</h4>
+                                                    <p>Perfecto para recordar al perro de tu...</p>
+                                                    <span class="price">$11k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="La Doble Vida" data-price="12000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/hotdog4.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80</span>
+                                                    <h4>La Doble Vida</h4>
+                                                    <p>Ideal para los que llevan una vida secreta.</p>
+                                                    <span class="price">$12k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="El Beso de Judas" data-price="14000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/hotdog5.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80</span>
+                                                    <h4>El Beso de Judas</h4>
+                                                    <p>Ideal para los traicionados</p>
+                                                    <span class="price">$14k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
@@ -307,85 +322,85 @@
                                 <div class="swiper mySwiper-2" id="swiper4">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Sprite" data-price="2000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>Sprite 250ml</h4>
+                                                    <p></p>
+                                                    <span class="price">$2k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Producto 1" data-price="2000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida2.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>Agua Cristal</h4>
+                                                    <p></p>
+                                                    <span class="price">$2k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Coca Cola" data-price="2000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida3.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>Coca Cola Sin Azucar</h4>
+                                                    <p></p>
+                                                    <span class="price">$2k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Quatro" data-price="3000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida4.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>Quatro</h4>
+                                                    <p></p>
+                                                    <span class="price">$3k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Premium" data-price="2000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida5.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
+                                                    <h4>Premio</h4>
+                                                    <p></p>
                                                     <span class="price">$80.00</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product">
+                                            <div class="product" data-id="1" data-name="Producto 1" data-price="2000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida6.png">
                                                 </div>
                                                 <div class="product-txt">
-                                                    <h4>Producto</h4>
-                                                    <p>calidad premium</p>
-                                                    <span class="price">$80.00</span>
+                                                    <h4>Coca Cola</h4>
+                                                    <p></p>
+                                                    <span class="price">$2k</span>
                                                     <button class="add-to-cart">Agregar al Carrito</button>
                                                 </div>
                                             </div>
@@ -405,18 +420,7 @@
                 
                         </div>
                     </main>
-                    <div class="cart">
-                        <h2>Tu Carrito</h2>
-                        <ul id="cart-items"></ul>
-                        <p>Total: $<span id="total-price">0</span></p>
-                        <button id="clear-cart">Vaciar Carrito</button>
-                        <button id="checkout" class="checkout-button">Finalizar Compra</button>
-                    </div>
-                
-                    <div id="confirmation" style="display:none;">
-                        <h2>¡Gracias por tu compra!</h2>
-                        <p>Tu compra ha sido procesada exitosamente.</p>
-                    </div>
+                    
         
         
                     <script src="https://cdn.jsdelivr.net/npm/swiper-bundle.min.js"></script>
