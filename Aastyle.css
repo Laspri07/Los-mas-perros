@@ -16,6 +16,7 @@ body {
 .container {
     max-width: 1350px;
     margin: 0 auto;
+    
 }
 
 .swiper-button-prev::after {
@@ -50,7 +51,11 @@ body {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    height: 70px;
+    height: 120px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
     
 }
 .navbar {
@@ -58,9 +63,14 @@ body {
 }
 .menu-1{
     margin-right: 100px;
+    
 
 }
 
+.menu-1 ul {
+    padding-top: 30px;
+    
+}
 .menu-2 {
     margin-left: 180px;
     display: flex;
@@ -69,11 +79,13 @@ body {
 }
 
 .logo-1 {
-    width: 0;
+    width: 0px;
 }
 
 .logo-2 {
-    width: 150px;
+    width: 100px;
+    padding-top: 10px;
+    
 }
 
 .barras {
@@ -121,7 +133,7 @@ body {
     float: left;
 }
 .menu .navbar ul li a {
-    font-size: 18px;
+    font-size: 25px;
     padding: 20px;
     color: #FFFFFF;
     display: block;
@@ -148,11 +160,13 @@ hasta aqui llega el codigo de la barra
 .header-content {
     margin-top: 200px;
     padding-bottom: 50px;
+    
 }
 
 .slider {
     display: flex;
     align-items: center;
+    padding-top: 150px;
 }
 
 .slider-txt {
@@ -165,6 +179,8 @@ hasta aqui llega el codigo de la barra
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight: 800;
+    font-family: "Bangers", system-ui;
+    font-style: normal;
 }
 
 .slider-txt p {

@@ -19,10 +19,10 @@ body {
 }
 
 
-aqui empieza el contenido de la barra
 .container {
     max-width: 1350px;
     margin: 0 auto;
+    
 }
 
 .swiper-button-prev::after {
@@ -57,7 +57,11 @@ aqui empieza el contenido de la barra
     display: flex;
     justify-content: center;
     z-index: 1000;
-    height: 70px;
+    height: 120px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
     
 }
 .navbar {
@@ -65,9 +69,14 @@ aqui empieza el contenido de la barra
 }
 .menu-1{
     margin-right: 100px;
+    
 
 }
 
+.menu-1 ul {
+    padding-top: 30px;
+    
+}
 .menu-2 {
     margin-left: 180px;
     display: flex;
@@ -76,10 +85,13 @@ aqui empieza el contenido de la barra
 }
 
 .logo-1 {
-    width: 0;
+    width: 0px;
 }
+
 .logo-2 {
-    width: 150px;
+    width: 100px;
+    padding-top: 10px;
+    
 }
 
 .barras {
@@ -101,6 +113,8 @@ aqui empieza el contenido de la barra
 .barra img {
     margin: 8px 0 0 6px;
 }
+
+
 
 .socials {
     display: flex;
@@ -125,7 +139,7 @@ aqui empieza el contenido de la barra
     float: left;
 }
 .menu .navbar ul li a {
-    font-size: 18px;
+    font-size: 25px;
     padding: 20px;
     color: #FFFFFF;
     display: block;
@@ -146,8 +160,7 @@ aqui empieza el contenido de la barra
     cursor: pointer;
     display: none;
 } 
-
-hasta aqui va el contenido de la barra
+hasta aqui llega el codigo de la barra
 
 
 
@@ -169,6 +182,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 35px;
+    padding-top: 30px;
    
 }
 
@@ -186,6 +200,7 @@ h1 {
     width: 100%;
     justify-content: center;     /* Centra el contenido horizontalmente */
     align-items: center;  
+    padding-top: 130px;
 }
 
 button {
@@ -238,10 +253,13 @@ footer {
     justify-content: center;     /* Centra el contenido horizontalmente */
     align-items: center;         /* Centra el contenido verticalmente */
     background-color: #080708;  /* Color de fondo para mejor visualización */
-    font-size: 23px;             /* Tamaño de fuente de 18px */
+    font-size: 34px;             /* Tamaño de fuente de 18px */
     color: white;                /* Texto de color blanco */
     text-align: center; 
     font-weight: bold;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 

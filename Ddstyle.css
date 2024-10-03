@@ -16,6 +16,7 @@ body {
 .container {
     max-width: 1350px;
     margin: 0 auto;
+    
 }
 
 .swiper-button-prev::after {
@@ -25,10 +26,10 @@ body {
     font-size: 25px;
 }
 .swiper-button-next {
-    color: #DB241B;
+    color: #FF6201;
 }
 .swiper-button-prev {
-    color: #DB241B;
+    color: #FF6201;
 }
 
 .swiper-pagination-bullet {
@@ -37,7 +38,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #DB241B;
+    background-color: #FF6201;
 }
 
 .menu {
@@ -50,7 +51,11 @@ body {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    height: 70px;
+    height: 120px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
     
 }
 .navbar {
@@ -58,9 +63,14 @@ body {
 }
 .menu-1{
     margin-right: 100px;
+    
 
 }
 
+.menu-1 ul {
+    padding-top: 30px;
+    
+}
 .menu-2 {
     margin-left: 180px;
     display: flex;
@@ -69,10 +79,13 @@ body {
 }
 
 .logo-1 {
-    width: 0;
+    width: 0px;
 }
+
 .logo-2 {
-    width: 150px;
+    width: 100px;
+    padding-top: 10px;
+    
 }
 
 .barras {
@@ -94,6 +107,9 @@ body {
 .barra img {
     margin: 8px 0 0 6px;
 }
+
+
+
 .socials {
     display: flex;
     gap: 10px;
@@ -117,7 +133,7 @@ body {
     float: left;
 }
 .menu .navbar ul li a {
-    font-size: 18px;
+    font-size: 25px;
     padding: 20px;
     color: #FFFFFF;
     display: block;
@@ -137,7 +153,8 @@ body {
 .menu label {
     cursor: pointer;
     display: none;
-}
+} 
+hasta aqui llega el codigo de la barra
 
 
 
@@ -145,6 +162,7 @@ body {
     .menu {
         padding: 20px;
         justify-content: space-between;
+        
     }
 
     .menu-2 {
@@ -233,10 +251,13 @@ body {
  
     .tabs {
         padding: 50px 30px;
+    
     }
 
+    
     .tabs label {
         width: 33%;
+      
     }
 
     .info {
@@ -262,6 +283,7 @@ body {
 
     .info-txt h2 {
         font-size: 50px;
+  
     }
 
     .info-txt p {
@@ -310,7 +332,9 @@ body {
 
 
 
-
+.secondary-menu {
+    padding-top: 50px;
+}
 
 
 .products {
@@ -334,6 +358,10 @@ body {
     font-weight: 700;
     transition: background ease 0.2s;
     background-color: #fefeff;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .tabs .tab {
@@ -393,10 +421,14 @@ body {
 
 .product-txt h4 {
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 25px;
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 5px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
 }
 
 .product-txt p {
