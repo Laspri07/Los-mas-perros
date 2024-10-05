@@ -84,9 +84,6 @@ body {
    
 }
 
-.logo-1 {
-    width: 0px;
-}
 
 .logo-2 {
     width: 100px;
@@ -160,6 +157,32 @@ body {
     cursor: pointer;
     display: none;
 } 
+.account-dropdown {
+    margin-top: 7px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    width: 90px;
+    position: absolute;
+    background-color: #f9f9f9;
+    left: 0px; 
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
 hasta aqui llega el codigo de la barra
 
 
