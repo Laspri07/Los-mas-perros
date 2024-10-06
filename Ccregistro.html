@@ -48,30 +48,28 @@
             </nav>
         </div>
 
-    <section class="form-login">
-        <h5>Registrate</h5>
-        <input class="controls" type="text" name="usuario" value="" placeholder="Nombre de usuario">
-        <input class="controls" type="email" name="email" value="" placeholder="Email">
-        <input class="controls" type="text" name="nombre" value="" placeholder="Nombre">
-        <input class="controls" type="text" name="apellido" value="" placeholder="Apellido">
-        <label for="documento"></label>
-        <select class="controls" id="documento" name="documento"
-            <label for="documento"></label>>
-            <option value="none">Tipo de documento</option>
-            <option value="dni">DNI</option>
-            <option value="pasaporte">Pasaporte</option>
-            <option value="carnet_extranjeria">Carnet de Extranjería</option>
-            <option value="licencia_conducir">Licencia de Conducir</option>
-        </select>
-        <input class="controls" type="number" name="documento" value="" placeholder="Ingrese el numero de documento">
-        <input class="controls" type="number" name="numero" value="" placeholder="Numero de telefono">
-        <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
-    
-        <input class="buttons" type="submit" name="" value="Continuar">
-        <p><a href="Bblogin.html">¿Ya tienes una cuenta? inicia Sesion</a></p>
+        <form action="Ccregistro.php" method="GET">
+            <section class="form-login">
+                <h5>Regístrate</h5>
+                <input class="controls" type="text" name="usuario" placeholder="Nombre de usuario">
+                <input class="controls" type="email" name="email" placeholder="Email">
+                <input class="controls" type="text" name="nombre" placeholder="Nombre">
+                <input class="controls" type="text" name="apellido" placeholder="Apellido">
+                <select class="controls" name="documento1">
+                    <option value="none">Tipo de documento</option>
+                    <option value="dni">DNI</option>
+                    <option value="pasaporte">Pasaporte</option>
+                    <option value="carnet_extranjeria">Carnet de Extranjería</option>
+                    <option value="licencia_conducir">Licencia de Conducir</option>
+                </select>
+                <input class="controls" type="number" name="documento2" placeholder="Ingrese el número de documento">
+                <input class="controls" type="number" name="numero" placeholder="Número de teléfono">
+                <input class="controls" type="password" name="contrasena" placeholder="Contraseña">
+                <input class="buttons" type="submit" value="Continuar">
+                <p><a href="Bblogin.html">¿Ya tienes una cuenta? Inicia Sesión</a></p>
+            </section>
+        </form>
         
-        
-    </section>
 
-</body>
+ </body>
 </html>
