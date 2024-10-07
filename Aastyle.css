@@ -523,9 +523,8 @@ hasta aqui llega el codigo de la barra
     }
 
     .info-img img {
-        width: 400px;
-        height: 200px;
-        margin-bottom: 25px;
+        width: 100%;
+        height: auto;
     }
 
     .info-txt {
@@ -535,10 +534,12 @@ hasta aqui llega el codigo de la barra
 
     .info-txt h2 {
         font-size: 50px;
+        margin-right: 40px;
     }
 
     .info-txt p {
         font-size: 16px;
+        margin-right: 40px;
     }
 
     .btn-1 {
@@ -573,3 +574,33 @@ hasta aqui llega el codigo de la barra
 
 
 }
+
+/* Estilos para ocultar y mostrar el menú desplegable */
+.account-dropdown {
+    margin-top: 7px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    width: 90px;
+    position: absolute;
+    background-color: #f9f9f9;
+    left: 0px; /* Alinea el menú a la derecha del ícono */
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+

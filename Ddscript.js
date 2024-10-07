@@ -103,16 +103,7 @@ function clearCart() {
 
 // Función para finalizar la compra
 function checkout() {
-    if (cart.length === 0) {
-        alert('Tu carrito está vacío.');
-        return;
-    }
-
-    // Muestra la sección de confirmación
-    confirmation.style.display = 'block';
-
-    // Limpia el carrito
-    clearCart();
+    window.location.href = "llcarrito.html"
 }
 
 // Añadir eventos a los botones de "Agregar al Carrito"

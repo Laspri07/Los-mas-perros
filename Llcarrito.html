@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="Llcarrito.css" />
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+  </style>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="menu container">
+
+            <img class="logo-1" src="images/Logo.svg" alt="Logo">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="Eenosotros.html">Nosotros</a></li>
+                        <li><a href="Fftopcachones.html">Top cachones</a></li>
+                        <li><a href="Ggcontactanos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <a href="Aaprincipal.html">
+                <img href="Aaprincipal.html" class="logo-2" src="images/logo.svg" alt="">
+                </a>
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="Ddmenu.html">Menu</a> </li>
+                    </ul>
+                    <div class="barras">
+                        <a href="#seccion-destino">
+                            <div class="barra">
+                                <img src="images/1ubi.svg" alt="">
+                            </div>
+                        </a>
+                      
+                        <a href="Bblogin.html">
+                            <div class="barra">
+                                <img src="images/3user.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+    <div class="cart-container" id="cartContainer">
+        <div class="cart">
+            <h2>Tu Carrito</h2>
+            <br>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button id="clear-cart">Vaciar Carrito</button>
+            <button id="checkout" class="checkout-button">Finalizar Compra</button>
+        </div>
+    
+        <div id="confirmation" style="display:none;">
+            <h2>¡Gracias por tu compra!</h2>
+            <p>Tu compra ha sido procesada exitosamente.</p>
+        </div>
+    </div>
+
+
+    <script src="Llcarrito.js"></script> 
+    <script src="Ddscript.js"></script> 
+
+
+
+
+</body>
+</html>
+
