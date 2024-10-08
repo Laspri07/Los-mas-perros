@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .top-cachones {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 120px; /* Mantén el margen superior pero ajustado */
+    margin-bottom: 80px;
+    background-color: #740606bb;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 13px 37px #020d49;
+    border-top: 4px solid #017bab;
+    padding-top: 50px;
+ 
+  }
+  .top-cachones h1 {
+    margin-bottom: 20px; 
+    margin-bottom: 10px;
+    text-align: center;
+    height: 40px;
+    font-size: 50px;
+
+
+}
+
+.top-cachones h2 {
+    margin-bottom: 10px; 
+    margin: 0;
+    text-align: center;
+    height: 40px;
+ 
+}
+    
+  
+  h1 {
+    text-align: center;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  .top-cachones p {
+    margin-bottom: 10px; 
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    border-bottom: 2px solid;
+  }
+  
+  #ranking-list {
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+  }
+  
+  .ranking-item {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Necesario para posicionar la corona */
+  }
+  
+  .ranking-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .ranking-item .info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cachos {
+    font-weight: bold;
+    color: #017bab;
+  }
+  
+  /* Estilos para la corona como emoji */
+  .corona {
+    position: absolute;
+    top: -15px; /* Ajustar para que se superponga sobre la foto */
+    left: 9px; /* Alinear con el borde superior de la foto */
+    font-size: 20px; /* Tamaño del emoji */
+    z-index: 1; /* Asegurarnos que la corona esté sobre la imagen */
+  }
+  
+  /* Ajustar el tamaño de la corona para los tres primeros puestos */
+  .ranking-item:first-child .corona {
+    font-size: 24px;
+  }
+  
+  .ranking-item:nth-child(2) .corona {
+    font-size: 22px;
+  }
+  
+  .ranking-item:nth-child(3) .corona {
+    font-size: 20px;
+  }
+  

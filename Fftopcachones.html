@@ -1,525 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Cachones</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="Ccstyle.css" />
-    <style>
-        /* Los mismos estilos que antes */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-    max-width: 1350px;
-    margin: 0 auto;
-}
-
-.swiper-button-prev::after {
-    font-size: 25px;
-}
-.swiper-button-next::after {
-    font-size: 25px;
-}
-.swiper-button-next {
-    color: #DB241B;
-}
-.swiper-button-prev {
-    color: #DB241B;
-}
-
-.swiper-pagination-bullet {
-    background-color: #fefeff;
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #DB241B;
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #0d0d0d;
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-    height: 70px;
-    
-}
-.navbar {
-    display: flex;
-}
-.menu-1{
-    margin-right: 100px;
-    text-decoration: none;
-
-}
-
-.menu-2 {
-    margin-left: 180px;
-    display: flex;
-    align-items: center;
-   
-}
-
-.logo-1 {
-    width: 0;
-}
-.logo-2 {
-    width: 150px;
-}
-
-.barras {
-    display: flex;
-    gap: 10px;
-    
-}
-.barra {
-    margin: 0 10px;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-
-.barra:hover {
-    background-color: #DB241B;
-}
-.barra img {
-    margin: 8px 0 0 6px;
-}
-.socials {
-    display: flex;
-    gap: 10px;
-    
-}
-.social {
-    margin: 0 10px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid #DB241B;
-    border-radius: 50%;
-}
-.social:hover {
-    background-color: #DB241B;
-}
-.social img {
-    margin: 8px 0 0 10px;
-}
-.menu .navbar ul li {
-    position: relative;
-    float: left;
-}
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #FFFFFF;
-    display: block;
-}
-.menu .navbar ul li a:hover {
-    color: #DB241B;
-}
-
-#menu {
-    display: none;
-}
-
-.menu-icono {
-    width: 15px;
-}
-
-.menu label {
-    cursor: pointer;
-    display: none;
-}
-
-
-
-@media(max-width: 991px) {
-    .menu {
-        padding: 20px;
-        justify-content: space-between;
-    }
-
-    .menu-2 {
-        display: none;
-    }
-
-    .logo-1 {
-        width: 100px;
-    }
-
-    .logo-2 {
-        width: 0;
-    }
-
-    .menu label {
-        display: initial;
-    }
-
-    .menu .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #181818;
-        display: none;
-    }
-
-    .menu .navbar ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu .navbar ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    #menu:checked ~ .navbar {
-        display: initial;
-    }
-
-    .header-content {
-        padding: 30px;
-        margin-top: 100px;
-    }
-
-    .slider {
-        flex-direction: column;
-    }
-    
-    .slider-txt {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .slider-txt h1 {
-        font-size: 50px;
-    }
-
-    .slider-txt p {
-        font-size: 16px;
-    }
-
-    .btn-1 {
-        padding: 10px 25px;
-        font-size: 14px;
-    }
-
-    .slider-img {
-        width: 100%;
-        text-align: center;
-    }
-    .slider-img img {
-        margin-right: 0px;
-        width: 300px;
-    }
-
-    .swiper-horizontal > .swiper-pagination-bullets,
-    .swiper-pagination-bullets,.swiper-pagination-horizontal,
-    .swiper-pagination-custom,
-    .swiper-pagination-fraction {
-        bottom: -7px;
-    }
- 
-    .tabs {
-        padding: 50px 30px;
-    }
-
-    .tabs label {
-        width: 33%;
-    }
-
-    .info {
-        padding: 30px;
-        flex-direction: column;
-    }
-    
-    .info-img {
-        width: 100%;
-        text-align: center;
-    }
-
-    .info-img img {
-        width: 400px;
-        height: 200px;
-        margin-bottom: 25px;
-    }
-
-    .info-txt {
-        width: 100%;
-        text-align: center;
-    }
-
-    .info-txt h2 {
-        font-size: 50px;
-    }
-
-    .info-txt p {
-        font-size: 16px;
-    }
-
-    .btn-1 {
-        font-size: 16px;
-    }
-    .horario {
-        padding: 30px;
-        text-align: center;
-    }
-    .horario-info h2 {
-        font-size: 50px;
-        margin-bottom: 15px;
-    }
-    .horaio-txt {
-        flex-direction: column;
-    }
-    .socials {
-        justify-content: center;
-    }
-    .social img {
-        margin: 8px 0 0 0;
-    }
-    .footer {
-        padding: 30px;
-        flex-direction: column;
-        text-align: center;
-    }
-    .links h4 {
-        margin: 25px 0px 10px 0px;
-    }
-
-
-
-}
-
-
-/* barra fija */
-
-
-        .container {
-            display: flex;
-            padding: 20px;
-        }
-
-        .table-container {
-            margin-top: 80px;
-            width: 80%;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        th, td {
-            padding: 12px;
-            font-size: 16px;
-        }
-
-        th {
-            background-color: #b02828;
-            color: white;
-        }
-
-        .crown {
-            width: 30px;
-            vertical-align: middle;
-        }
-
-        .description {
-            width: 40%;
-            padding-left: 20px;
-            margin-top: 80px;
-        }
-
-        .description h2 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .description p {
-            font-size: 18px;
-        }
-
-        footer {
-            background-color: #b02828;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .social-icons {
-            display: inline-flex;
-            gap: 15px;
-        }
-
-        .social-icons img {
-            width: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Cachones</title>
+  <link rel="stylesheet" href="Ffstyle.css">
+  <link rel="stylesheet" href="Aastyle.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+  </style>
 </head>
 <body>
-
-    <!-- Menú de navegación -->
-    <div class="menu container">
-
-        <img class="logo-1" src="images/logo.svg" alt="">
-        <input type="checkbox" id="menu"/>
-        <label for="menu">
-            <img src="images/menu.png" class="menu-icono" alt="Menu">
-        </label>
-        <nav class="navbar">
-            <div class="menu-1">
-                <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Top cachones</a></li>
-                    <li><a href="#">Contactanos</a></li>
-                </ul>
-            </div>
-            <a href="Aaprincipal.html">
-                <img href="Aaprincipal.html" class="logo-2" src="" alt="">
-                </a>
-            <div class="menu-2">
-                <ul>
-                    <li><a href="#">Menu</a> </li>
-                </ul>
-                <div class="barras">
-                    <a href="#">
-                        <div class="barra">
-                            <img src="images/1ubi.svg" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="barra">
-                            <img src="images/2carrito.svg" alt="Cart Icon" onclick="toggleCart()">
-                        </div>
-
-                    </a>
-                    <a href="Bblogin.html">
-                        <div class="barra">
-                            <img src="images/3user.svg" alt="">
-                        </div>
-                    </a>
-
+    <header>
+        <div class="menu container">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="Eenosotros.html">Nosotros</a></li>
+                        <li><a href="Fftopcachones.html">Top cachones</a></li>
+                        <li><a href="Ggcontactanos.html">Contactanos</a></li>
+                    </ul>
                 </div>
+                <a href="Aaprincipal.html">
+                <img href="Aaprincipal.html" class="logo-2" src="images/logo.svg" alt="">
+                </a>
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="Ddmenu.html">Menu</a> </li>
+                    </ul>
+                        <div class="account-dropdown">
+                            <img src="images/3user.svg" alt="Cuenta" id="account-icon">
+                            <div class=" dropdown-content" id="dropdown-menu">
+                                <a href="Kkcuenta.html">Tu cuenta</a>
+                                <a href="Bblogin.html">Iniciar sesion</a>
+                            </div>
+                          </div>
 
-            </div>
-
-        </nav>
-    </div>
-
-    <div class="container">
-
-        <!-- Tabla de "Top Cachones" -->
-        <div class="table-container">
-            <table id="top-cachones-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Compras</th>
-                    </tr>
-                </thead>
-                <tbody id="top-cachones-body">
-                    <!-- Las filas de la tabla serán actualizadas dinámicamente -->
-                </tbody>
-            </table>
+            </nav>
         </div>
+    </header>
+  <div class="top-cachones">
+    <h1>Top Cachones</h1>
+    <h2>¡Nuestros perros más fieles!</h2>
+    <p>Entre más compras tengas, más cachos habrá en tu cuenta.</p>
+    <ul id="ranking-list">
+      <!-- Aquí se generará el ranking dinámicamente -->
+    </ul>
+  </div>
 
-        <!-- Sección de descripción -->
-        <div class="description">
-            <h2>TOP CACHONES</h2>
-            <br>
-            <p>¡NUESTROS PERROS MÁS FIELES!</p>
-            <br>
-            <ul>
-                <li>Se agregan más cachos entre más cara sea tu compra.</li>
-            </ul>
-            <br>
-
-            <label for="buyer">Seleccione Cliente:</label>
-            <br>
-            <select id="buyer">
-                <option value="1">Nombre 1</option>
-                <option value="2">Nombre 2</option>
-                <option value="3">Nombre 3</option>
-                <option value="4">Nombre 4</option>
-                <option value="5">Nombre 5</option>
-            </select>
-            <br><br>
-            <button onclick="addPurchase()">Agregar Compra</button>
-        </div>
-
-    </div>
-
-
-
-    <script>
-        // Lista de clientes simulados con sus compras iniciales
-        const customers = [
-            { id: 1, name: "Nombre 1", purchases: 5 },
-            { id: 2, name: "Nombre 2", purchases: 3 },
-            { id: 3, name: "Nombre 3", purchases: 8 },
-            { id: 4, name: "Nombre 4", purchases: 2 },
-            { id: 5, name: "Nombre 5", purchases: 6 },
-        ];
-
-        // Función para actualizar la tabla según las compras
-        function updateTable() {
-            // Ordenar clientes por el número de compras, de mayor a menor
-            customers.sort((a, b) => b.purchases - a.purchases);
-
-            // Obtener el cuerpo de la tabla
-            const tbody = document.getElementById('top-cachones-body');
-            tbody.innerHTML = '';
-
-            // Agregar filas a la tabla
-            customers.forEach((customer, index) => {
-                const row = `<tr>
-                    <td>${index + 1}</td>
-                    <td>${customer.name}</td>
-                    <td>${customer.purchases}</td>
-                </tr>`;
-                tbody.innerHTML += row;
-            });
-        }
-
-        // Función para simular una compra
-        function addPurchase() {
-            const buyerId = parseInt(document.getElementById('buyer').value);
-            const customer = customers.find(c => c.id === buyerId);
-
-            if (customer) {
-                customer.purchases += 1; // Agregar una compra
-                updateTable(); // Actualizar la tabla
-            }
-        }
-
-        // Inicializar la tabla al cargar la página
-        window.onload = updateTable;
-    </script>
-
-    
-
+  <script src="Ffscript.js"></script>
 </body>
-</html> 
+</html>
+
 
