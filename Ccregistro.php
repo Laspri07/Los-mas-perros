@@ -41,3 +41,5 @@ if ($conn->query($sql) === TRUE) {
 // Cerrar la conexión
 $conn->close();
 ?>
+
+http://127.0.0.1:5500/
