@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="Eestyle.css">
+    <link rel="stylesheet" href="Aastyle.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
       </style>
@@ -13,30 +14,120 @@
 
 <body>
 
- 
+    <header>
+        <div class="menu container">
 
-    <div class="franja franja1">
-        <h1>Nosotros</h1>
-    </div>
+            <img class="logo-1" src="images/Logo.svg" alt="Logo">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="Eenosotros.html">Nosotros</a></li>
+                        <li><a href="Fftopcachones.html">Top cachones</a></li>
+                        <li><a href="Ggcontactanos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <a href="Aaprincipal.html">
+                <img href="Aaprincipal.html" class="logo-2" src="images/logo.svg" alt="">
+                </a>
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="Ddmenu.html">Menu</a> </li>
+                    </ul>
+                    <div class="barras">
+                  
+                        <a href="#">
+                            <div class="barra">
+                                <img src="images/2carrito.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="Bblogin.html">
+                            <div class="barra">
+                                <img src="images/3user.svg" alt="">
+                            </div>
+                        </a>
 
-    <div class="franja franja2">
-        <div class="titulo franja franja2>"
-        <h2>¿Quienes<br> somos?</h2></div>
-        <div class="info franja franja2"><p>Nosotros somos Los Más Perros Ofc, un establecimiento de comidas rápidas vegetarianas<br> 
-        que ofrece opciones deliciosas y saludables para satisfacer las necesidades de los vegetarianos, <br>
-        con la comodidad de pedido a domicilio a través de nuestra plataforma en línea.</p></div>
+                    </div>
 
-    </div>
+                </div>
 
-    <div class="franja franja3">
-        <div class="titulo franja franja3>"
-        <h2>Nuestra<br> Mision</h2></div>
+            </nav>
+        </div>
+        </header>
 
-        <div class="info franja franja3"><p>Nuestra misión es ser un restaurante con las mejores opciones de comida rápida vegetariana, 
-            destacados por nuestra gran temática de infieles y por brindar una excelente atención al 
-            cliente con diferentes dinámicas en nuestra página  web y redes sociales.
-        </p></div>
 
-    </div>
+       
+            <section class="seccion-titulo">
+                <h1>Nosotros</h1>
+            </section>
+        
+            <section class="info">
+                <div class="subsection">
+                    <h2>¿Quienes Somos?</h2>
+                    <p>Nosotros somos Los Más Perros Ofc, un establecimiento de comidas rápidas vegetarianas que ofrece opciones deliciosas y saludables para satisfacer las necesidades de los vegetarianos, con la comodidad de pedido a domicilio a través de nuestra plataforma en línea.</p>
+                </div>
+        
+                <div class="subsection">
+                    <h2>Misión</h2>
+                    <p>Nuestra misión es ser un restaurante con las mejores opciones de comida rápida vegetariana, destacados por nuestra gran temática de infieles y por brindar una excelente atención al cliente con diferentes dinámicas en nuestra página web y redes sociales.</p>
+                </div>
+        
+                <div class="subsection">
+                    <h2>Visión</h2>
+                    <p>Nuestra visión es expandirnos a nivel nacional y ser reconocidos como el principal referente de comida rápida vegetariana, ofreciendo un servicio innovador y único para nuestros clientes.</p>
+                </div>
+        
+                <div class="subsection">
+                    <h2>Objetivos de la Empresa</h2>
+                    <p>Nuestros objetivos incluyen mejorar continuamente la calidad de nuestros productos, expandir nuestro menú, y garantizar una experiencia de usuario excepcional a través de nuestras plataformas en línea.</p>
+                </div>
+        
+                <div class="subsection">
+                    <h2>Equipo de trabajo</h2>
+                    <div class="team">
+                        <img src="foto1.jpg" alt="Foto 1" onclick="mostrarInfo('info1')">
+                        <img src="foto2.jpg" alt="Foto 2" onclick="mostrarInfo('info2')">
+                        <img src="foto3.jpg" alt="Foto 3" onclick="mostrarInfo('info3')">
+                        <img src="foto4.jpg" alt="Foto 4" onclick="mostrarInfo('info4')">
+                    </div>
+                    <div id="info1" class="info-tab">
+                        <h3>Nombre: Juan Pérez</h3>
+                        <p>Edad: 30 años</p>
+                        <p>Ocupación: Gerente general</p>
+                    </div>
+                    <div id="info2" class="info-tab">
+                        <h3>Nombre: María Gómez</h3>
+                        <p>Edad: 28 años</p>
+                        <p>Ocupación: Chef principal</p>
+                    </div>
+                    <div id="info3" class="info-tab">
+                        <h3>Nombre: Luis Martínez</h3>
+                        <p>Edad: 35 años</p>
+                        <p>Ocupación: Encargado de logística</p>
+                    </div>
+                    <div id="info4" class="info-tab">
+                        <h3>Nombre: Carla Fernández</h3>
+                        <p>Edad: 25 años</p>
+                        <p>Ocupación: Encargada de redes sociales</p>
+                    </div>
+                </div>
+            </section>
+        
+            <script>
+                function mostrarInfo(infoId) {
+                    var tabs = document.getElementsByClassName('info-tab');
+                    for (var i = 0; i < tabs.length; i++) {
+                        tabs[i].style.display = 'none';
+                    }
+                    document.getElementById(infoId).style.display = 'block';
+                }
+            </script>
+        </body>
+        </html>
+        
+
 </body>
 </html>
