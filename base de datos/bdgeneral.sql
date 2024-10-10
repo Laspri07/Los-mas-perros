@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 08-10-2024 a las 17:53:16
--- Versión del servidor: 8.0.30
--- Versión de PHP: 8.1.10
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 10-10-2024 a las 21:16:59
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,49 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bdempleado`
---
-CREATE DATABASE IF NOT EXISTS `bdempleado` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bdempleado`;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `empleado`
---
-
-CREATE TABLE `empleado` (
-  `Nombre1` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Apellido1` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Correo` varchar(50) NOT NULL,
-  `Ciudad` varchar(50) DEFAULT NULL,
-  `Area` varchar(50) DEFAULT NULL,
-  `Hojadevida` blob
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `empleado`
---
-
-INSERT INTO `empleado` (`Nombre1`, `Apellido1`, `Correo`, `Ciudad`, `Area`, `Hojadevida`) VALUES
-('Alberto', 'Alarcon', 'alarcon@gmail.com', 'Pereira', 'Finanzas', NULL),
-('Alejandro', 'Diaz', 'ale@gmail.com', 'Medellin', 'Chef', NULL),
-('Jose', 'Villegas', 'jose@gmail.com', 'Cartago', 'Mesero', NULL);
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `empleado`
---
-ALTER TABLE `empleado`
-  ADD PRIMARY KEY (`Correo`);
---
 -- Base de datos: `bdgeneral`
 --
-CREATE DATABASE IF NOT EXISTS `bdgeneral` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bdgeneral`;
 
 -- --------------------------------------------------------
 
@@ -69,14 +28,14 @@ USE `bdgeneral`;
 --
 
 CREATE TABLE `cliente` (
-  `Telefono` int NOT NULL,
-  `Nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Apellido` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Correo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Tipodocu` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Numerodocu` int NOT NULL DEFAULT '0',
-  `Contraseña` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `cachos` int DEFAULT NULL,
+  `Telefono` int(11) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `Apellido` varchar(50) NOT NULL,
+  `Correo` varchar(50) NOT NULL,
+  `Tipodocu` varchar(50) NOT NULL,
+  `Numerodocu` int(11) NOT NULL DEFAULT 0,
+  `Contraseña` varchar(50) NOT NULL,
+  `cachos` int(11) DEFAULT NULL,
   `Nombre_usuario` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -96,10 +55,10 @@ INSERT INTO `cliente` (`Telefono`, `Nombre`, `Apellido`, `Correo`, `Tipodocu`, `
 --
 
 CREATE TABLE `comentario` (
-  `numcomen` int NOT NULL,
-  `Comentario` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Numerodocu` int DEFAULT NULL,
-  `Archivo` blob
+  `numcomen` int(11) NOT NULL,
+  `Comentario` varchar(150) DEFAULT NULL,
+  `Numerodocu` int(11) DEFAULT NULL,
+  `Archivo` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -123,7 +82,7 @@ CREATE TABLE `producto` (
   `Descripcion` varchar(50) DEFAULT NULL,
   `Precio` varchar(50) DEFAULT NULL,
   `Disponibilidad` varchar(50) DEFAULT NULL,
-  `Codigoproducto` int NOT NULL DEFAULT '0'
+  `Codigoproducto` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -169,7 +128,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `numcomen` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `numcomen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
@@ -180,46 +139,6 @@ ALTER TABLE `comentario`
 --
 ALTER TABLE `comentario`
   ADD CONSTRAINT `FK_comentario_cliente` FOREIGN KEY (`Numerodocu`) REFERENCES `cliente` (`Numerodocu`);
---
--- Base de datos: `bdproveedor`
---
-CREATE DATABASE IF NOT EXISTS `bdproveedor` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bdproveedor`;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `proveedor`
---
-
-CREATE TABLE `proveedor` (
-  `Nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Telefono` bigint NOT NULL,
-  `NIT` int NOT NULL,
-  `Correo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `PyS` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Comentario` varchar(50) DEFAULT NULL,
-  `Archivo` blob
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `proveedor`
---
-
-INSERT INTO `proveedor` (`Nombre`, `Telefono`, `NIT`, `Correo`, `PyS`, `Comentario`, `Archivo`) VALUES
-('Delicias', 3214897596, 4578, '123456789', 'Comidas rapidas', 'hola', NULL),
-('Ricuras', 3217894569, 456789123, 'Ricuras@gmail.com', 'Comidas rapidas', 'hola', NULL),
-('SalchiMonster', 4567418529, 741258963, 'Salchimonster@gmail.com', 'Comidas rapidas', 'hola', NULL);
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `proveedor`
---
-ALTER TABLE `proveedor`
-  ADD PRIMARY KEY (`NIT`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
