@@ -28,14 +28,62 @@ if (!isset($_SESSION['Nombre'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Cuenta</title>
-    <link rel="stylesheet" href="Kkcuenta.css">
+    <link rel="stylesheet" href="Kkstyle.css">
+    <link rel="stylesheet" href="Aastyle.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
       </style>
 </head>
 <body>
 
-    <div class="container">
+<header>
+        <div class="menu container">
+
+            <img class="logo-1" src="images/Logo.svg" alt="Logo">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="Eenosotros.html">Nosotros</a></li>
+                        <li><a href="Fftopcachones.html">Top cachones</a></li>
+                        <li><a href="Ggcontactanos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <a href="Aaprincipal.html">
+                <img href="Aaprincipal.html" class="logo-2" src="images/logo.svg" alt="">
+                </a>
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="Ddmenu.html">Menu</a> </li>
+                    </ul>
+                    <div class="barras">
+                        <a href="#seccion-destino">
+                            <div class="barra">
+                                <img src="images/1ubi.svg" alt="">
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <div class="account-dropdown">
+                        <img src="images/3user.svg" alt="Cuenta" id="account-icon">
+                        <div class=" dropdown-content" id="dropdown-menu">
+                            <a href="Kkcuenta.php" class="btn">Tu cuenta</a>
+                            <a href="Bblogin.html">Iniciar sesion</a>
+                        </div>
+                    </div>
+
+               
+
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="contenedor-cuenta">
         <h1>Bienvenido, <?php echo $_SESSION['Nombre']; ?> <?php echo $_SESSION['Apellido']; ?></h1>
         
         <div class="profile-section">

@@ -1,4 +1,10 @@
 <?php
+session_start(); // Iniciar la sesión
+
+// Habilitar la visualización de errores
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Parámetros de conexión a la base de datos
 $servername = "localhost"; // O el host donde está tu base de datos
 $username = "root"; // Cambia si es necesario
@@ -18,12 +24,14 @@ $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 
 // Preparar la consulta SQL para verificar las credenciales
-$sql = "SELECT * FROM cliente WHERE Nombre_usuario = '$usuario' AND Contraseña = '$contrasena'";
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT * FROM cliente WHERE Nombre_usuario = ? AND Contraseña = ?");
+$stmt->bind_param("ss", $usuario, $contrasena);
+$stmt->execute();
+$result = $stmt->get_result();
 
-if (mysqli_num_rows($result) == 1) {
+if ($result->num_rows == 1) {
     // Usuario autenticado
-    $row = mysqli_fetch_assoc($result);
+    $row = $result->fetch_assoc();
     
     // Guardar datos en la sesión
     $_SESSION['Nombre'] = $row['Nombre'];
@@ -42,5 +50,6 @@ if (mysqli_num_rows($result) == 1) {
 }
 
 // Cerrar la conexión
+$stmt->close();
 $conn->close();
 ?>

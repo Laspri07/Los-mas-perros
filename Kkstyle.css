@@ -1,0 +1,109 @@
+/* Estilos generales para la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #080708;
+}
+
+
+
+.contenedor-cuenta {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 80px;
+    background-color: #740606bb;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 13px 37px #020d49;
+    border-top: 4px solid #017bab;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px; 
+    text-align: center;
+    height: 40px;
+    font-size: 48px;
+}
+
+.profile-section {
+    margin-top: 20px;
+ 
+}
+
+h2 {
+    margin-bottom: 10px; 
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid;
+    
+}
+
+ul.profile-info {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 10px;
+}
+
+ul.profile-info li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+ul.profile-info li strong {
+    color: #080708;
+}
+
+.actions {
+    margin-top: 30px;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    background-color: #017bab;
+    border: none;
+    color: white;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul.profile-info li {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+

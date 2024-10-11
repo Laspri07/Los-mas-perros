@@ -57,7 +57,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="tel"], input[type="email"], textarea, input[type="file"] {
+input[type="text"], input[type="number"], input[type="tel"], input[type="email"], textarea, input[type="file"] {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
