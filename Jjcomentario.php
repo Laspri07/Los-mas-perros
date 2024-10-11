@@ -35,11 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $checkStmt->get_result();
 
     if ($result->num_rows == 0) {
-        // Mensaje si el número de documento no existe
-        echo "<script>alert('El número de documento no está registrado. Debe registrarse primero.');</script>";
-        // Redirigir a la página de registro
-        header("Location: Ccregistro.html");
-        exit(); // Detener el script después de la redirección
+        // Redirigir a Jjregistro.html en lugar de mostrar un mensaje
+        header("Location: Jjregistro.html");
+        exit(); // Asegúrate de detener el script después de redirigir// Detener el script después de la redirección
     }
 
     // Preparar la consulta SQL para insertar el comentario

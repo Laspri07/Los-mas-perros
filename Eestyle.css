@@ -37,13 +37,13 @@ section.info {
 
 .subsection h2 {
     font-size: 2rem;
-    color: #444;
+    color: white;
 }
 
 .subsection p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #666;
+    color: white;
 }
 
 .team {
@@ -73,10 +73,10 @@ section.info {
 
 .info-tab h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: white;
 }
 
 .info-tab p {
     font-size: 1.2rem;
-    color: #555;
+    color: white;
 }
