@@ -35,29 +35,37 @@
                         <li><a href="Ddmenu.html">Menu</a> </li>
                     </ul>
                     <div class="barras">
-                  
-                        <a href="Bblogin.html">
+                        <a href="#seccion-destino">
                             <div class="barra">
-                                <img src="images/3user.svg" alt="">
+                                <img src="images/1ubi.svg" alt="">
                             </div>
                         </a>
-
+                        
                     </div>
 
-                </div>
+                    <div class="account-dropdown">
+                        <img src="images/3user.svg" alt="Cuenta" id="account-icon">
+                        <div class=" dropdown-content" id="dropdown-menu">
+                            <a href="Kkcuenta.php" class="btn">Tu cuenta</a>
+                            <a href="Bblogin.html">Iniciar sesion</a>
+                        </div>
+                    </div>
+
+               
 
             </nav>
         </div>
-        </header>
+    </header>
 
+    <!-- Formulario de login -->
     <section class="form-login">
-        <h5>Iniciar sesion</h5>
-        <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
-        <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
-        <input class="buttons" type="submit" name="" value="Ingresar">
-        <p><a href="Ccregistro.html">¿Aun no tienes cuenta? Registrate</a></p>
-        
+        <h5>Iniciar sesión</h5>
+        <form action="Bblogin.php" method="POST">
+            <input class="controls" type="text" name="usuario" placeholder="Usuario" required>
+            <input class="controls" type="password" name="contrasena" placeholder="Contraseña" required>
+            <input class="buttons" type="submit" value="Ingresar">
+        </form>
+        <p><a href="Ccregistro.html">¿Aun no tienes cuenta? Regístrate</a></p>
     </section>
-
 </body>
 </html>
