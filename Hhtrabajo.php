@@ -38,7 +38,8 @@ if (in_array($tipoArchivo, $extensionesPermitidas)) {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        echo "Datos insertados correctamente.";
+        header("Location: Hhenviado.html");
+        exit();
     } else {
         echo "Error al insertar los datos: " . $stmt->error;
     }

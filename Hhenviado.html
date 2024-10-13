@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Registro</title>
+    <link rel="stylesheet" href="Aastyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+        body {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
+            font-family: "Poppins", sans-serif;
+            background-color: #080708;
+            text-align: center; /* Centra el texto */
+        }
+        .mensaje {
+            background-color: #740606bb; /* Fondo blanco para el mensaje */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            max-width: 600px;
+           margin: auto;
+            margin-top: 80px;
+           margin-bottom: 80px;
+           color: white;
+           box-shadow: 7px 13px 37px #020d49;
+           border-top: 4px solid #017bab;
+
+        }
+        h1 {
+            font-size: 38px; /* Tamaño del texto del encabezado */
+            color: white; /* Color del texto */
+            font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+        
+        }
+        .btn-volver {
+            margin-top: 20px; /* Espacio arriba del botón */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados del botón */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            font-size: 27px; /* Tamaño del texto del botón */
+            height: 45px;
+             background-color: #017bab;
+             margin-bottom: 18px;
+             font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
+        }
+        .btn-volver:hover {
+            background-color: #0056b3; /* Color más oscuro al pasar el ratón por encima */
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu container">
+
+            <img class="logo-1" src="images/Logo.svg" alt="Logo">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="Eenosotros.html">Nosotros</a></li>
+                        <li><a href="Fftopcachones.html">Top cachones</a></li>
+                        <li><a href="Ggcontactanos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <a href="Aaprincipal.html">
+                <img href="Aaprincipal.html" class="logo-2" src="images/logo.svg" alt="">
+                </a>
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="Ddmenu.html">Menu</a> </li>
+                    </ul>
+  
+
+                    <div class="account-dropdown">
+                        <img src="images/3user.svg" alt="Cuenta" id="account-icon">
+                        <div class=" dropdown-content" id="dropdown-menu">
+                            <a href="Kkcuenta.php" class="btn">Tu cuenta</a>
+                            <a href="Bblogin.html">Iniciar sesion</a>
+                        </div>
+                    </div>
+
+               
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="mensaje">
+        <h1>Tu hoja de vida ha sido enviada con éxito. ¡Gracias por querer ser parte de nuestro infierno!</h1>
+        <button class="btn-volver" onclick="window.location.href='Ggcontactanos.html';">Volver</button>
+    </div>
+</body>
+</html>

@@ -1,19 +1,16 @@
-// Simulación de base de datos de usuarios con sus nombres y número de compras
-let usuarios = [
-  { id: 1, nombre: "Juan", cachos: 15 },
-  { id: 2, nombre: "Ana", cachos: 20 },
-  { id: 3, nombre: "Luis", cachos: 18 },
-  { id: 4, nombre: "Marta", cachos: 10 },
-  { id: 5, nombre: "Carlos", cachos: 8 },
-  { id: 6, nombre: "Lucía", cachos: 12 },
-  { id: 7, nombre: "Pedro", cachos: 22 },
-  { id: 8, nombre: "María", cachos: 17 },
-  { id: 9, nombre: "Elena", cachos: 14 },
-  { id: 10, nombre: "Diego", cachos: 19 }
-];
+// Función para obtener los datos del ranking desde el PHP
+async function obtenerRanking() {
+  try {
+    const response = await fetch('Fftopcachones.php'); // Asegúrate de que la ruta sea correcta
+    const usuarios = await response.json(); // Se espera que el PHP retorne datos en formato JSON
+    actualizarRanking(usuarios);
+  } catch (error) {
+    console.error('Error al obtener el ranking:', error);
+  }
+}
 
 // Función para ordenar los usuarios por número de cachos y mostrarlos en el ranking
-function actualizarRanking() {
+function actualizarRanking(usuarios) {
   const rankingList = document.getElementById('ranking-list');
   rankingList.innerHTML = ''; // Limpiar el contenido actual
 
@@ -27,7 +24,7 @@ function actualizarRanking() {
 
     listItem.innerHTML = `
       <div class="info">
-        <span>${index + 1}. ${usuario.nombre}</span>
+        <span>${index + 1}. ${usuario.Nombre} ${usuario.Apellido}</span>
       </div>
       <span class="cachos">${usuario.cachos} Cachos</span>
     `;
@@ -36,5 +33,5 @@ function actualizarRanking() {
   });
 }
 
-// Llamar a la función para mostrar el ranking al cargar la página
-window.onload = actualizarRanking;
+// Llamar a la función para obtener y mostrar el ranking al cargar la página
+window.onload = obtenerRanking;
