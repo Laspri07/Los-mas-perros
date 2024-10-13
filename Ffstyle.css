@@ -88,25 +88,23 @@ body {
     color: #017bab;
   }
   
-  /* Estilos para la corona como emoji */
-  .corona {
-    position: absolute;
-    top: -15px; /* Ajustar para que se superponga sobre la foto */
-    left: 9px; /* Alinear con el borde superior de la foto */
-    font-size: 20px; /* Tamaño del emoji */
-    z-index: 1; /* Asegurarnos que la corona esté sobre la imagen */
-  }
   
-  /* Ajustar el tamaño de la corona para los tres primeros puestos */
-  .ranking-item:first-child .corona {
+  /* Estilos para los primeros tres puestos con coronas */
+  .ranking-item:first-child .info::before {
+    content: "👑";
     font-size: 24px;
+    margin-right: 10px;
   }
   
-  .ranking-item:nth-child(2) .corona {
+  .ranking-item:nth-child(2) .info::before {
+    content: "👑";
     font-size: 22px;
+    margin-right: 10px;
   }
   
-  .ranking-item:nth-child(3) .corona {
+  .ranking-item:nth-child(3) .info::before {
+    content: "👑";
     font-size: 20px;
+    margin-right: 10px;
   }
   
