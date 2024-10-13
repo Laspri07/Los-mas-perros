@@ -41,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        echo "¡Datos enviados correctamente!";
+        header("Location: Iienviado.html");
+        exit();
     } else {
         echo "Error: " . $stmt->error;
     }

@@ -45,8 +45,9 @@ if ($result->num_rows == 1) {
     header("Location: Kkcuenta.php");
     exit(); // Asegúrate de detener el script después de redirigir
 } else {
-    // Mostrar mensaje de error en caso de fallo
-    echo "Usuario o contraseña incorrectos.";
+         // Redirigir a Jjregistro.html en lugar de mostrar un mensaje
+         header("Location: Jjregistro.html");
+         exit(); // Asegúrate de detener el script después de redirigir// Detener el script después de la redirección
 }
 
 // Cerrar la conexión

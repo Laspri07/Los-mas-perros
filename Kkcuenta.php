@@ -84,7 +84,7 @@ if (!isset($_SESSION['Nombre'])) {
 
 
     <div class="contenedor-cuenta">
-        <h1>Bienvenido, <?php echo $_SESSION['Nombre']; ?> <?php echo $_SESSION['Apellido']; ?></h1>
+        <h1>Bienvenido(a), <?php echo $_SESSION['Nombre']; ?> <?php echo $_SESSION['Apellido']; ?></h1>
         
         <div class="profile-section">
             <h2>Datos Personales</h2>

@@ -46,7 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        echo "Comentario registrado correctamente.";
+         // Redirigir a Jjenviado.html en lugar de mostrar un mensaje
+         header("Location: Jjenviado.html");
+         exit(); // Asegúrate de detener el script después de redirigir// Detener el script después de la redirección
     } else {
         echo "Error al registrar el comentario: " . $stmt->error; // Mensaje de error si falla la inserción
     }
