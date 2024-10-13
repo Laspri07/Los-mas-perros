@@ -22,7 +22,7 @@ body {
 
 
 .secondary-menu {
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 
@@ -33,7 +33,7 @@ body {
 .tabs {
     display: flex;
     flex-wrap: wrap;
-    padding: 70px 0px;
+    padding: 130px 0px;
 }
 
 .tabs label {
@@ -196,74 +196,79 @@ button:hover {
 }
 
 .delete-button {
-    width: 80px; /* Cambia el tamaño solo para este botón */
+    width: 90px; /* Cambia el tamaño solo para este botón */
     height: 30px;
     background-color: #DB241B;
     color: white;
     font-size: 12px;
     border-radius: 5px;
-    margin-left: 10px; /* Añade espacio para separar del contenido */
-    margin-right: 10px;
+    margin-left: 20px; /* Añade espacio para separar del contenido */
+    margin-top: auto;
 }
 
 .cart {
-    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    justify-content: space-between; /* Mantiene el contenido principal separado de los botones */
+    flex-grow: 1; /* Hace que la lista de productos crezca si es necesario */
+    border: 2px solid #ccc;
+    padding: 50px;
     color: white;
+    overflow-y: auto; /* Habilita el desplazamiento vertical dentro del carrito */
 }
 
 #cart-items {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Habilita el desplazamiento si hay demasiados productos */
+    flex-grow: 1; /* Permite que la lista de productos crezca y ocupe el espacio disponible */
 }
 
 #cart-items li {
     display: flex;
-    justify-content: space-between;
     padding: 5px 0;
+}
+
+.cart-price {
+    font-size: 25px;
+    margin-bottom: 20px; /* Espacio entre el precio y los botones */
+    text-align: right; /* Alinea el precio a la derecha */
 }
 
 #clear-cart, .checkout-button {
     background-color: #DB241B;
     margin-top: 10px;
+    width: 100%; /* Los botones ocupan todo el ancho */
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 #clear-cart:hover, .checkout-button:hover {
     background-color: #c82333;
 }
 
-#confirmation {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #DB241B;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/*Carrito sub pagina*/
-.cart {
-    border: 1px solid #ccc;
-    padding: 20px;
-    color: white;
-    height: 90%; /* Permite que la altura se ajuste automáticamente */
-
+.cart-buttons {
+    display: flex;
+    flex-direction: column; /* Coloca los botones uno encima del otro */
+    gap: 10px; /* Espacio entre los botones */
 }
 
 .cart-container {
     position: fixed;
-    top: 50;
     right: -500px; /* Inicialmente fuera de la vista */
     width: 500px;
-    height: 100vh;
     background-color: #1f1d1d;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
     transition: right 0.3s ease-in-out;
-    z-index: 1000;
-    margin-top: 15px;
+    margin-top: 50px;
     padding: 20px;
+    height: 80vh; /* Limita la altura total del contenedor del carrito al 80% del viewport */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
 }
 
-/* Si el carrito está visible */
 .cart-container.open {
-    right: 0; /* Lo desliza dentro de la vista */
+    right: 0; /* Desliza dentro de la vista */
 }
-

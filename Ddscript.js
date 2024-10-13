@@ -103,7 +103,16 @@ function clearCart() {
 
 // Función para finalizar la compra
 function checkout() {
-    window.location.href = "llcarrito.html"
+    if (cart.length === 0) {
+        alert('Tu carrito está vacío.');
+        return;
+    }
+
+    // Muestra una alerta de compra exitosa
+    alert('Compra exitosa. ¡Gracias por tu compra!');
+
+    // Limpia el carrito
+    clearCart();
 }
 
 // Añadir eventos a los botones de "Agregar al Carrito"
