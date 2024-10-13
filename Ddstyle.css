@@ -165,7 +165,7 @@ hasta aqui llega el codigo de la barra
 
 
 .secondary-menu {
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 
@@ -176,7 +176,7 @@ hasta aqui llega el codigo de la barra
 .tabs {
     display: flex;
     flex-wrap: wrap;
-    padding: 70px 0px;
+    padding: 130px 0px;
 }
 
 .tabs label {
