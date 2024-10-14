@@ -22,6 +22,7 @@ var swiper2 = new Swiper (".mySwiper-2", {
     }
 });
 
+
 let tabInputs = document.querySelectorAll(".tabInput");
 
 tabInputs.forEach(function(input) {
@@ -134,3 +135,20 @@ function toggleCart() {
     const cart = document.getElementById('cartContainer');
     cart.classList.toggle('open');
 }
+
+/*Empieza codigo de esconder sesion */
+const accountIcon = document.getElementById('account-icon');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+accountIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Cierra el menú desplegable si haces clic fuera del ícono o del menú
+window.addEventListener('click', (event) => {
+    if (!event.target.matches('#account-icon')) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+
+
