@@ -35,3 +35,19 @@ function actualizarRanking(usuarios) {
 
 // Llamar a la función para obtener y mostrar el ranking al cargar la página
 window.onload = obtenerRanking;
+
+
+/*Empieza codigo de esconder sesion */
+const accountIcon = document.getElementById('account-icon');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+accountIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Cierra el menú desplegable si haces clic fuera del ícono o del menú
+window.addEventListener('click', (event) => {
+    if (!event.target.matches('#account-icon')) {
+        dropdownMenu.style.display = 'none';
+    }
+});

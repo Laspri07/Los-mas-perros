@@ -22,6 +22,7 @@ var swiper2 = new Swiper (".mySwiper-2", {
     }
 });
 
+
 let tabInputs = document.querySelectorAll(".tabInput");
 
 tabInputs.forEach(function(input) {
@@ -109,7 +110,7 @@ function checkout() {
     }
 
     // Muestra una alerta de compra exitosa
-    alert('Compra exitosa. ¡Gracias por tu compra!');
+    alert('Compra exitosa. ¡Gracias por tu compra!, El pago sera contraentrega');
 
     // Limpia el carrito
     clearCart();
@@ -134,3 +135,22 @@ function toggleCart() {
     const cart = document.getElementById('cartContainer');
     cart.classList.toggle('open');
 }
+
+/*Empieza codigo de esconder sesion */
+const accountIcon = document.getElementById('account-icon');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+accountIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Cierra el menú desplegable si haces clic fuera del ícono o del menú
+window.addEventListener('click', (event) => {
+    if (!event.target.matches('#account-icon')) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+
+
+
+
