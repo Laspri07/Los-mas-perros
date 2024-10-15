@@ -109,12 +109,35 @@ function checkout() {
         return;
     }
 
-    // Muestra una alerta de compra exitosa
-    alert('Compra exitosa. ¡Gracias por tu compra!, El pago sera contraentrega');
+    // Enviar petición AJAX para actualizar los cachos del cliente
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "Ddcompra.php", true); // Cambia el archivo PHP por el que creamos
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    // Limpia el carrito
-    clearCart();
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            if (xhr.responseText === "success") {
+                // Mostrar alerta de compra exitosa si se actualizan los cachos
+                alert('Compra exitosa. ¡Gracias por tu compra!, El pago será contraentrega');
+                
+                // Limpia el carrito
+                clearCart();
+            } else if (xhr.responseText === "error") {
+                // Redirigir al login si hay un problema
+                window.location.href = "Bblogin.html";
+            }
+        } else {
+            alert("Error al finalizar la compra. Inténtalo de nuevo.");
+        }
+    };
+
+    // Enviar la petición al servidor (puedes añadir más datos si es necesario)
+    xhr.send();
 }
+
+// Añadir evento al botón de "Finalizar Compra"
+checkoutButton.addEventListener('click', checkout);
+
 
 // Añadir eventos a los botones de "Agregar al Carrito"
 products.forEach(product => {
@@ -127,8 +150,6 @@ products.forEach(product => {
 // Añadir evento al botón de "Vaciar Carrito"
 clearCartButton.addEventListener('click', clearCart);
 
-// Añadir evento al botón de "Finalizar Compra"
-checkoutButton.addEventListener('click', checkout);
 
 /* Funcion de sub pagina */
 function toggleCart() {
