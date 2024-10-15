@@ -110,7 +110,7 @@ function checkout() {
     }
 
     // Muestra una alerta de compra exitosa
-    alert('Compra exitosa. ¡Gracias por tu compra!');
+    alert('Compra exitosa. ¡Gracias por tu compra!, El pago sera contraentrega');
 
     // Limpia el carrito
     clearCart();
@@ -150,5 +150,7 @@ window.addEventListener('click', (event) => {
         dropdownMenu.style.display = 'none';
     }
 });
+
+
 
 
