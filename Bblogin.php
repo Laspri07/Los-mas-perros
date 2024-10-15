@@ -46,7 +46,7 @@ if ($result->num_rows == 1) {
     exit(); // Asegúrate de detener el script después de redirigir
 } else {
          // Redirigir a Jjregistro.html en lugar de mostrar un mensaje
-         header("Location: Jjregistro.html");
+         header("Location: Bbregistro.html");
          exit(); // Asegúrate de detener el script después de redirigir// Detener el script después de la redirección
 }
 
