@@ -130,9 +130,11 @@ function checkout() {
             alert("Error al finalizar la compra. Inténtalo de nuevo.");
         }
     };
+    
 
-    // Enviar la petición al servidor (puedes añadir más datos si es necesario)
-    xhr.send();
+    // Enviar la petición al servidor 
+    xhr.send("data=valor");
+
 }
 
 // Añadir evento al botón de "Finalizar Compra"
