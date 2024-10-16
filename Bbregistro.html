@@ -106,5 +106,19 @@
         <h1>Aún no estás registrado en nuestro infierno, por favor ve y regístrate para que asi puedas iniciar sesión.</h1>
         <button class="btn-registrarse" onclick="window.location.href='Ccregistro.html';">Registrarse</button>
     </div>
+    <script> /*Empieza codigo de esconder sesion */
+        const accountIcon = document.getElementById('account-icon');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        
+        accountIcon.addEventListener('click', () => {
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Cierra el menú desplegable si haces clic fuera del ícono o del menú
+        window.addEventListener('click', (event) => {
+            if (!event.target.matches('#account-icon')) {
+                dropdownMenu.style.display = 'none';
+            }
+        }); </script>
 </body>
 </html>
