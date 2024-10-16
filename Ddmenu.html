@@ -45,13 +45,29 @@
                             <div class="cart">
                                 <h2>Tu Carrito</h2>
                                 <br>
-                                <ul id="cart-items"></ul>
-                                <p>Total: $<span id="total-price">0</span></p>
+                                
+                                <form id="checkout-form" action="finalizar-compra.php" method="post" onsubmit="return confirmarCompra();">
+                                    <ul id="cart-items">
+                                        <!-- Aquí se mostrarán los productos agregados al carrito -->
+                                    </ul>
+                                
+                                    <p>Total: $<span id="total-price">0.00</span></p>
+                                    
+                                <button type="submit" id="checkout" class="boton-compra">Finalizar Compra</button>
+                                </form>
                                 <button id="clear-cart">Vaciar Carrito</button>
-                                <button id="checkout" class="checkout-button">Finalizar Compra</button>
+                                
+                                <script>
+                                    // Confirmación de compra antes de enviar el formulario
+                                    function confirmarCompra() {
+                                        if (confirm("¿Estás seguro de que deseas finalizar la compra?")) {
+                                            return true;  // Envía el formulario
+                                        } else {
+                                            return false;  // Cancela el envío del formulario
+                                        }
+                                    }
+                                </script>
                             </div>
-                        
-                            <div id="confirmation" style="display:none;"></div>
                         </div>
                     </a>
                       
@@ -334,7 +350,7 @@
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="product" data-id="1" data-name="Producto 1" data-price="2000">
+                                            <div class="product" data-id="1" data-name="Agua Cristal" data-price="2000">
                                                 <div class="product-img">
                                                     <h4>Nuevo</h4>
                                                     <img src="images/bebida2.png">
