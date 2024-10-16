@@ -111,7 +111,7 @@ function checkout() {
 
     // Enviar petición AJAX para actualizar los cachos del cliente
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "Ddcompra.php", true); // Cambia el archivo PHP por el que creamos
+    xhr.open("POST", "Ddcompra.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onload = function() {
@@ -131,7 +131,7 @@ function checkout() {
         }
     };
 
-    // Enviar la petición al servidor (puedes añadir más datos si es necesario)
+    // Enviar la petición al servidor
     xhr.send();
 }
 
