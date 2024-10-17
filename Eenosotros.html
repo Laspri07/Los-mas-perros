@@ -80,61 +80,10 @@
                     <h2>Objetivos de la Empresa</h2>
                     <p>Nuestros objetivos incluyen mejorar continuamente la calidad de nuestros productos, expandir nuestro menú, y garantizar una experiencia de usuario excepcional a través de nuestras plataformas en línea.</p>
                 </div>
-        
-                <div class="subsection">
-                    <h2>Equipo de trabajo</h2>
-                    <div class="team">
-                        <img src="foto1.jpg" alt="Foto 1" onclick="mostrarInfo('info1')">
-                        <img src="foto2.jpg" alt="Foto 2" onclick="mostrarInfo('info2')">
-                        <img src="foto3.jpg" alt="Foto 3" onclick="mostrarInfo('info3')">
-                        <img src="foto4.jpg" alt="Foto 4" onclick="mostrarInfo('info4')">
-                    </div>
-                    <div id="info1" class="info-tab">
-                        <h3>Nombre: Valeria Lopez</h3>
-                        <p>Edad: 16 años</p>
-                        <p>Ocupación: Área Directiva</p>
-                    </div>
-                    <div id="info2" class="info-tab">
-                        <h3>Nombre: Sofia Lasprilla</h3>
-                        <p>Edad: 17 años</p>
-                        <p>Ocupación: Área de Producción</p>
-                    </div>
-                    <div id="info3" class="info-tab">
-                        <h3>Nombre: Isabella Cardenas</h3>
-                        <p>Edad: 17 años</p>
-                        <p>Ocupación: Área de Mercadeo</p>
-                    </div>
-                    <div id="info4" class="info-tab">
-                        <h3>Nombre: Camilo Torres</h3>
-                        <p>Edad: 17 años</p>
-                        <p>Ocupación: Área de Finanzas</p>
-                    </div>
-                </div>
-            </section>
-        
-            <script>
-                function mostrarInfo(infoId) {
-                    var tabs = document.getElementsByClassName('info-tab');
-                    for (var i = 0; i < tabs.length; i++) {
-                        tabs[i].style.display = 'none';
-                    }
-                    document.getElementById(infoId).style.display = 'block';
-                }
-                /*Empieza codigo de esconder sesion */
-const accountIcon = document.getElementById('account-icon');
-const dropdownMenu = document.getElementById('dropdown-menu');
 
-accountIcon.addEventListener('click', () => {
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-});
-
-// Cierra el menú desplegable si haces clic fuera del ícono o del menú
-window.addEventListener('click', (event) => {
-    if (!event.target.matches('#account-icon')) {
-        dropdownMenu.style.display = 'none';
-    }
-});
-            </script>
+                   
+        
+            
         </body>
         </html>
         
