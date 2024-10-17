@@ -5,6 +5,7 @@ $usuario = "root"; // Usuario de la base de datos
 $contraseña = ""; // Contraseña del usuario
 $base_datos = "bdproveedor"; // Nombre de la base de datos
 
+
 // Crear la conexión
 $conn = new mysqli($host, $usuario, $contraseña, $base_datos);
 
@@ -86,7 +87,7 @@ if (!isset($_SESSION['Nombre'])) {
                 <li><strong>Teléfono:</strong> <?php echo $_SESSION['Telefono']; ?></li>
                 <li><strong>Correo:</strong> <?php echo $_SESSION['Correo']; ?></li>
                 <li><strong>Número de documento:</strong> <?php echo $_SESSION['Numero_documento']; ?></li>
-                <li><strong>Número de cachos (compras):</strong> <?php echo $_SESSION['Cachos'] ?: '0'; ?></li>
+                <li><strong>Número de cachos (compras):</strong> <?php echo $_SESSION['Cachos'] ; ?></li>
             </ul>
         </div>
 
