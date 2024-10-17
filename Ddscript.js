@@ -99,19 +99,8 @@ function clearCart() {
 }
 
 // Añadir evento al botón de "Finalizar Compra"
-// Ya no necesitamos AJAX; el formulario se encargará de la lógica
 let checkoutButton = document.getElementById("checkout");
 
-// Añadir evento al botón de "Finalizar Compra"
-checkoutButton.addEventListener("click", function (event) {
-    // Confirmación de compra antes de enviar el formulario
-    if (confirm("¿Estás seguro de que deseas finalizar la compra?")) {
-        // Si el usuario confirma, enviamos el formulario
-        document.getElementById("checkout-form").submit();
-    } else {
-        event.preventDefault(); // Cancelar el envío del formulario si el usuario no confirma
-    }
-});
 
 
 // Añadir eventos a los botones de "Agregar al Carrito"

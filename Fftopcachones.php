@@ -1,36 +1,31 @@
 <?php
-header('Content-Type: application/json'); // Indica que se devuelve JSON
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Configuración de conexión a la base de datos
-$host = "localhost"; // Puede variar según tu servidor
-$usuario = "root"; // Usuario de la base de datos
-$contraseña = ""; // Contraseña del usuario
-$base_datos = "bdproveedor"; // Nombre de la base de datos
+include("conexion2.php"); // Asegúrate de que este archivo conecta a la base de datos
 
-// Crear la conexión
-$conn = new mysqli($host, $usuario, $contraseña, $base_datos);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
-}
-
-// Consulta para obtener las 10 personas que más cachos tienen
-$sql = "SELECT Nombre, Apellido, cachos FROM cliente WHERE cachos IS NOT NULL ORDER BY cachos DESC LIMIT 10";
+$sql = "SELECT Nombre_usuario, cachos FROM cliente ORDER BY cachos DESC LIMIT 10";
 $result = $conn->query($sql);
 
-// Array para almacenar los resultados
-$ranking = [];
-if ($result->num_rows > 0) {
-    // Almacenar resultados en un array
+if ($result) {
+    // Empieza la salida del HTML
+    echo "<ul>";
     while ($row = $result->fetch_assoc()) {
-        $ranking[] = $row;
+        // Crea un elemento de lista para cada usuario
+        echo "<li>{$row['Nombre_usuario']} - {$row['cachos']} Cachos</li>";
     }
+    echo "</ul>";
+} else {
+    echo "Error en la consulta: " . $conn->error; // Mensaje de error si falla la consulta
 }
 
-// Cerrar la conexión
 $conn->close();
-
-// Devolver el resultado en formato JSON
-echo json_encode($ranking);
 ?>
+
+
+
+
+
+
+
+
