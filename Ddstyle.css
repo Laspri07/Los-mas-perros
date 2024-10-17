@@ -398,6 +398,9 @@ button:hover {
     flex-direction: column; /* Coloca los botones uno encima del otro */
     gap: 10px; /* Espacio entre los botones */
 }
+.boton-compra {
+    width: 355px;
+}
 
 .cart-container {
     position: fixed;

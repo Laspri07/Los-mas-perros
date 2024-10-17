@@ -59,14 +59,6 @@ if (!isset($_SESSION['Nombre'])) {
                     <ul>
                         <li><a href="Ddmenu.html">Menu</a> </li>
                     </ul>
-                    <div class="barras">
-                        <a href="#seccion-destino">
-                            <div class="barra">
-                                <img src="images/1ubi.svg" alt="">
-                            </div>
-                        </a>
-                        
-                    </div>
 
                     <div class="account-dropdown">
                         <img src="images/3user.svg" alt="Cuenta" id="account-icon">
@@ -102,5 +94,19 @@ if (!isset($_SESSION['Nombre'])) {
             <a href="Kkcerrar_sesion.php" class="button">Cerrar Sesión</a>
         </div>
     </div>
+    <script> /*Empieza codigo de esconder sesion */
+const accountIcon = document.getElementById('account-icon');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+accountIcon.addEventListener('click', () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Cierra el menú desplegable si haces clic fuera del ícono o del menú
+window.addEventListener('click', (event) => {
+    if (!event.target.matches('#account-icon')) {
+        dropdownMenu.style.display = 'none';
+    }
+}); </script>
 </body>
 </html>
